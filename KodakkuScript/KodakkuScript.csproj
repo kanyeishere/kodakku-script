@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <EnablePreviewFeatures>true</EnablePreviewFeatures>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Reference Include="Dalamud">
+        <HintPath>C:\Users\Yiwei\AppData\Roaming\XIVLauncherCN\addon\Hooks\10.0.0.17\Dalamud.dll</HintPath>
+      </Reference>
+      <Reference Include="KodakkuAssist">
+        <HintPath>C:\Users\Yiwei\AppData\Roaming\XIVLauncherCN\installedPlugins\KodakkuAssist\0.1.15.0\KodakkuAssist.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    </ItemGroup>
+
+</Project>
