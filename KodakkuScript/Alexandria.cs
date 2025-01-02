@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 namespace KodakkuScript;
 
-[ScriptType(name: "Alexandria", territorys: [1199], guid: "", version: "0.0.0.1",
+[ScriptType(name: "Alexandria", territorys: [1199], guid: "a28aa141-fcee-4501-a874-2fce79caf35f", version: "0.0.0.1",
     author: "Wotou")]
 public class Omega1
 {
