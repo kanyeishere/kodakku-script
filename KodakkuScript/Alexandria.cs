@@ -4,7 +4,7 @@ using KodakkuAssist.Module.Draw;
 using System.Numerics;
 using Newtonsoft.Json;
 
-namespace KodakkuScript;
+namespace KodakkuScriptAlexandria;
 
 [ScriptType(name: "Alexandria", territorys: [1199], guid: "a28aa141-fcee-4501-a874-2fce79caf35f", version: "0.0.0.1",
     author: "Wotou")]
@@ -261,15 +261,5 @@ public static class EventExtensions
     public static Vector3 SourcePosition(this Event @event)
     {
         return JsonConvert.DeserializeObject<Vector3>(@event["SourcePosition"]);
-    }
-
-    public static Vector3 TargetPosition(this Event @event)
-    {
-        return JsonConvert.DeserializeObject<Vector3>(@event["TargetPosition"]);
-    }
-
-    public static Vector3 EffectPosition(this Event @event)
-    {
-        return JsonConvert.DeserializeObject<Vector3>(@event["EffectPosition"]);
     }
 }

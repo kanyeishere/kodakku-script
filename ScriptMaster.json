@@ -6,5 +6,13 @@
     "Author": "Wotou",
     "DownloadUrl": "https://raw.githubusercontent.com/kanyeishere/kodakku-script/refs/heads/master/KodakkuScript/Alexandria.cs",
     "UpdateInfo": ""
+  },
+  {
+    "Name": "绝亚P1.5地火起跑指路",
+    "Guid": "2bbc1449-ceab-4d61-90a6-a7d69e81da2f",
+    "Version": "0.0.0.1",
+    "Author": "Wotou",
+    "DownloadUrl": "https://raw.githubusercontent.com/kanyeishere/kodakku-script/refs/heads/master/KodakkuScript/TEA.cs",
+    "UpdateInfo": ""
   }
 ]
