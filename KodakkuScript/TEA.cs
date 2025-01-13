@@ -41,7 +41,7 @@ namespace KodakkuScriptTea
                     dp.Owner = accessory.Data.Me;
                     dp.ScaleMode |= ScaleMode.YByDistance;
                     dp.Color = accessory.Data.DefaultSafeColor;
-                    dp.DestoryAt = 2500;
+                    dp.DestoryAt = 2800;
                     dp.TargetPosition = pos;
                     accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
                     isDetermined = true;
@@ -55,7 +55,7 @@ namespace KodakkuScriptTea
                     dp.Owner = accessory.Data.Me;
                     dp.ScaleMode |= ScaleMode.YByDistance;
                     dp.Color = accessory.Data.DefaultSafeColor;
-                    dp.DestoryAt = 2500;
+                    dp.DestoryAt = 2800;
                     dp.TargetPosition = pos;
                     accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
                     isDetermined = true;
