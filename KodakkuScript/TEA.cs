@@ -13,7 +13,7 @@ namespace KodakkuScriptTea
     /// territorys specifies the regions where this trigger is effective. If left empty, it will be effective in all regions.
     /// Classes with the same GUID will be considered the same trigger. Please ensure your GUID is unique and does not conflict with others.
     /// </summary>
-    [ScriptType(name: "绝亚P1.5地火起跑指路", territorys: [887],guid: "2bbc1449-ceab-4d61-90a6-a7d69e81da2f",version:"0.0.0.1",author: "Wotou")]
+    [ScriptType(name: "绝亚P1.5地火起跑指路", territorys: [887],guid: "2bbc1449-ceab-4d61-90a6-a7d69e81da2f",version:"0.0.0.2",author: "Wotou")]
     public class TeaScript
     {
         private bool is1256 = false;
@@ -29,7 +29,7 @@ namespace KodakkuScriptTea
             
             if (!isDetermined)
             {
-                accessory.Method.SendChat("/e pos: " + pos);
+                // accessory.Method.SendChat("/e pos: " + pos);
                 var side = DetermineSide(pos.X, pos.Z);
                 
                 if (side == "左侧" && is1256)
@@ -97,8 +97,8 @@ namespace KodakkuScriptTea
                     is1256 = false;
                     break;
              }
-             accessory.Method.SendChat("/e 麻将: " + (id - 78));
-             accessory.Method.SendChat("/e 是1256组吗: " + is1256);
+             // accessory.Method.SendChat("/e 麻将: " + (id - 78));
+             // accessory.Method.SendChat("/e 是1256组吗: " + is1256);
         }
         
         // 判断传入点相对于偏转22.5度线的左右位置
