@@ -7930,7 +7930,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 dp.Color = accessory.Data.DefaultSafeColor;
                 dp.DestoryAt = 7500;
                 accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
-                accessory.Method.SendChat($"/Wotou_BRD moveTo {dp.TargetPosition.X} {dp.TargetPosition.Y} {dp.TargetPosition.Z} delay 0");
+                accessory.Method.SendChat($"/Wotou_BRD moveTo {dp.TargetPosition.Value.X} {dp.TargetPosition.Value.Y} {dp.TargetPosition.Value.Z} delay 0");
                 
 
                 dp = accessory.Data.GetDefaultDrawProperties();
@@ -7943,7 +7943,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 dp.Delay = 7500;
                 dp.DestoryAt = 5000;
                 accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
-                accessory.Method.SendChat($"/Wotou_BRD moveTo {dp.TargetPosition.X} {dp.TargetPosition.Y} {dp.TargetPosition.Z} delay {dp.Delay}");
+                accessory.Method.SendChat($"/Wotou_BRD moveTo {dp.TargetPosition.Value.X} {dp.TargetPosition.Value.Y} {dp.TargetPosition.Value.Z} delay {dp.Delay}");
 
 
                 dp = accessory.Data.GetDefaultDrawProperties();
@@ -7956,7 +7956,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 dp.Delay = 12500;
                 dp.DestoryAt = 5000;
                 accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
-                accessory.Method.SendChat($"/Wotou_BRD moveTo {dp.TargetPosition.X} {dp.TargetPosition.Y} {dp.TargetPosition.Z} delay {dp.Delay}");
+                accessory.Method.SendChat($"/Wotou_BRD moveTo {dp.TargetPosition.Value.X} {dp.TargetPosition.Value.Y} {dp.TargetPosition.Value.Z} delay {dp.Delay}");
 
 
                 dp = accessory.Data.GetDefaultDrawProperties();
@@ -7969,7 +7969,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 dp.Delay = 22500;
                 dp.DestoryAt = 15000;
                 accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
-                accessory.Method.SendChat($"/Wotou_BRD moveTo {dp.TargetPosition.X} {dp.TargetPosition.Y} {dp.TargetPosition.Z} delay {dp.Delay}");
+                accessory.Method.SendChat($"/Wotou_BRD moveTo {dp.TargetPosition.Value.X} {dp.TargetPosition.Value.Y} {dp.TargetPosition.Value.Z} delay {dp.Delay}");
             }
 
             //中火
@@ -7984,7 +7984,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 dp.Color = accessory.Data.DefaultSafeColor;
                 dp.DestoryAt = 7500;
                 accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
-                accessory.Method.SendChat($"/Wotou_BRD moveTo {dp.TargetPosition.X} {dp.TargetPosition.Y} {dp.TargetPosition.Z} delay 0");
+                accessory.Method.SendChat($"/Wotou_BRD moveTo {dp.TargetPosition.Value.X} {dp.TargetPosition.Value.Y} {dp.TargetPosition.Value.Z} delay 0");
 
                 dp = accessory.Data.GetDefaultDrawProperties();
                 dp.Name = "P3_时间压缩_中火_放回溯";
@@ -7996,7 +7996,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 dp.Delay = 7500;
                 dp.DestoryAt = 5000;
                 accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
-                accessory.Method.SendChat($"/Wotou_BRD moveTo {dp.TargetPosition.X} {dp.TargetPosition.Y} {dp.TargetPosition.Z} delay {dp.Delay}");
+                accessory.Method.SendChat($"/Wotou_BRD moveTo {dp.TargetPosition.Value.X} {dp.TargetPosition.Value.Y} {dp.TargetPosition.Value.Z} delay {dp.Delay}");
 
 
                 dp = accessory.Data.GetDefaultDrawProperties();
@@ -8009,7 +8009,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 dp.Delay = 12500;
                 dp.DestoryAt = 5000;
                 accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
-                accessory.Method.SendChat($"/Wotou_BRD moveTo {dp.TargetPosition.X} {dp.TargetPosition.Y} {dp.TargetPosition.Z} delay {dp.Delay}");
+                accessory.Method.SendChat($"/Wotou_BRD moveTo {dp.TargetPosition.Value.X} {dp.TargetPosition.Value.Y} {dp.TargetPosition.Value.Z} delay {dp.Delay}");
 
 
                 dp = accessory.Data.GetDefaultDrawProperties();
@@ -8022,7 +8022,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 dp.Delay = 17500;
                 dp.DestoryAt = 10000;
                 accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
-                accessory.Method.SendChat($"/Wotou_BRD moveTo {dp.TargetPosition.X} {dp.TargetPosition.Y} {dp.TargetPosition.Z} delay {dp.Delay}");
+                accessory.Method.SendChat($"/Wotou_BRD moveTo {dp.TargetPosition.Value.X} {dp.TargetPosition.Value.Y} {dp.TargetPosition.Value.Z} delay {dp.Delay}");
 
 
                 dp = accessory.Data.GetDefaultDrawProperties();
@@ -8035,7 +8035,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 dp.Delay = 32500;
                 dp.DestoryAt = 5000;
                 accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
-                accessory.Method.SendChat($"/Wotou_BRD moveTo {dp.TargetPosition.X} {dp.TargetPosition.Y} {dp.TargetPosition.Z} delay {dp.Delay}");
+                accessory.Method.SendChat($"/Wotou_BRD moveTo {dp.TargetPosition.Value.X} {dp.TargetPosition.Value.Y} {dp.TargetPosition.Value.Z} delay {dp.Delay}");
 
 
             }
@@ -8052,7 +8052,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 dp.Color = accessory.Data.DefaultSafeColor;
                 dp.DestoryAt = 7500;
                 accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
-                accessory.Method.SendChat($"/Wotou_BRD moveTo {dp.TargetPosition.X} {dp.TargetPosition.Y} {dp.TargetPosition.Z} delay 0");
+                accessory.Method.SendChat($"/Wotou_BRD moveTo {dp.TargetPosition.Value.X} {dp.TargetPosition.Value.Y} {dp.TargetPosition.Value.Z} delay 0");
 
 
                 dp = accessory.Data.GetDefaultDrawProperties();
@@ -8065,7 +8065,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 dp.Delay = 12500;
                 dp.DestoryAt = 5000;
                 accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
-                accessory.Method.SendChat($"/Wotou_BRD moveTo {dp.TargetPosition.X} {dp.TargetPosition.Y} {dp.TargetPosition.Z} delay {dp.Delay}");
+                accessory.Method.SendChat($"/Wotou_BRD moveTo {dp.TargetPosition.Value.X} {dp.TargetPosition.Value.Y} {dp.TargetPosition.Value.Z} delay {dp.Delay}");
 
 
                 dp = accessory.Data.GetDefaultDrawProperties();
@@ -8078,7 +8078,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 dp.Delay = 17500;
                 dp.DestoryAt = 5000;
                 accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
-                accessory.Method.SendChat($"/Wotou_BRD moveTo {dp.TargetPosition.X} {dp.TargetPosition.Y} {dp.TargetPosition.Z} delay {dp.Delay}");
+                accessory.Method.SendChat($"/Wotou_BRD moveTo {dp.TargetPosition.Value.X} {dp.TargetPosition.Value.Y} {dp.TargetPosition.Value.Z} delay {dp.Delay}");
 
 
                 dp = accessory.Data.GetDefaultDrawProperties();
@@ -8091,7 +8091,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 dp.Delay = 22500;
                 dp.DestoryAt = 5000;
                 accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
-                accessory.Method.SendChat($"/Wotou_BRD moveTo {dp.TargetPosition.X} {dp.TargetPosition.Y} {dp.TargetPosition.Z} delay {dp.Delay}");
+                accessory.Method.SendChat($"/Wotou_BRD moveTo {dp.TargetPosition.Value.X} {dp.TargetPosition.Value.Y} {dp.TargetPosition.Value.Z} delay {dp.Delay}");
 
 
                 dp = accessory.Data.GetDefaultDrawProperties();
@@ -8104,7 +8104,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 dp.Delay = 27500;
                 dp.DestoryAt = 10000;
                 accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
-                accessory.Method.SendChat($"/Wotou_BRD moveTo {dp.TargetPosition.X} {dp.TargetPosition.Y} {dp.TargetPosition.Z} delay {dp.Delay}");
+                accessory.Method.SendChat($"/Wotou_BRD moveTo {dp.TargetPosition.Value.X} {dp.TargetPosition.Value.Y} {dp.TargetPosition.Value.Z} delay {dp.Delay}");
             }
 
             if (myFire == 4)
@@ -8166,7 +8166,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                     dp.Color = accessory.Data.DefaultSafeColor;
                     dp.DestoryAt = 7500;
                     accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
-                    accessory.Method.SendChat($"/Wotou_BRD moveTo {dp.TargetPosition.X} {dp.TargetPosition.Y} {dp.TargetPosition.Z} delay 0");
+                    accessory.Method.SendChat($"/Wotou_BRD moveTo {dp.TargetPosition.Value.X} {dp.TargetPosition.Value.Y} {dp.TargetPosition.Value.Z} delay 0");
 
 
                     dp = accessory.Data.GetDefaultDrawProperties();
@@ -8179,7 +8179,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                     dp.Delay = 12500;
                     dp.DestoryAt = 5000;
                     accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
-                    accessory.Method.SendChat($"/Wotou_BRD moveTo {dp.TargetPosition.X} {dp.TargetPosition.Y} {dp.TargetPosition.Z} delay {dp.Delay}");
+                    accessory.Method.SendChat($"/Wotou_BRD moveTo {dp.TargetPosition.Value.X} {dp.TargetPosition.Value.Y} {dp.TargetPosition.Value.Z} delay {dp.Delay}");
 
 
                     dp = accessory.Data.GetDefaultDrawProperties();
@@ -8192,7 +8192,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                     dp.Delay = 17500;
                     dp.DestoryAt = 5000;
                     accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
-                    accessory.Method.SendChat($"/Wotou_BRD moveTo {dp.TargetPosition.X} {dp.TargetPosition.Y} {dp.TargetPosition.Z} delay {dp.Delay}");
+                    accessory.Method.SendChat($"/Wotou_BRD moveTo {dp.TargetPosition.Value.X} {dp.TargetPosition.Value.Y} {dp.TargetPosition.Value.Z} delay {dp.Delay}");
 
 
                     dp = accessory.Data.GetDefaultDrawProperties();
@@ -8205,7 +8205,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                     dp.Delay = 22500;
                     dp.DestoryAt = 5000;
                     accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
-                    accessory.Method.SendChat($"/Wotou_BRD moveTo {dp.TargetPosition.X} {dp.TargetPosition.Y} {dp.TargetPosition.Z} delay {dp.Delay}");
+                    accessory.Method.SendChat($"/Wotou_BRD moveTo {dp.TargetPosition.Value.X} {dp.TargetPosition.Value.Y} {dp.TargetPosition.Value.Z} delay {dp.Delay}");
 
 
                     dp = accessory.Data.GetDefaultDrawProperties();
@@ -8218,7 +8218,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                     dp.Delay = 27500;
                     dp.DestoryAt = 10000;
                     accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
-                    accessory.Method.SendChat($"/Wotou_BRD moveTo {dp.TargetPosition.X} {dp.TargetPosition.Y} {dp.TargetPosition.Z} delay {dp.Delay}");
+                    accessory.Method.SendChat($"/Wotou_BRD moveTo {dp.TargetPosition.Value.X} {dp.TargetPosition.Value.Y} {dp.TargetPosition.Value.Z} delay {dp.Delay}");
 
                 }
             }
@@ -8244,7 +8244,6 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 dp.Color = accessory.Data.DefaultSafeColor;
                 dp.DestoryAt = 4000;
                 accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
-                accessory.Method.SendChat($"/Wotou_BRD moveTo {dp.TargetPosition.X} {dp.TargetPosition.Y} {dp.TargetPosition.Z} delay 0");
 
             }
         }
