@@ -28,7 +28,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
     [ScriptType(name: "Karlin的绝伊甸脚本 (灵视改装版) wotou 修改自用",
         territorys: [1238],
         guid: "148718fd-575d-493a-8ac7-1cc7092aff81",
-        version: "0.0.1.16",
+        version: "0.0.1.16.01",
         note: notesOfTheScript,
         author: "Karlin")]
 
@@ -8026,7 +8026,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 dp.Owner = accessory.Data.Me;
                 dp.TargetPosition = RotatePoint(stopPos, centre, myRot);
                 dp.Color = accessory.Data.DefaultSafeColor;
-                dp.Delay = 32500;
+                dp.Delay = 33300;
                 dp.DestoryAt = 5000;
                 accessory.Method.SendChat($"/Wotou_BRD moveTo ({dp.TargetPosition.Value.X:F1}, {dp.TargetPosition.Value.Y:F1}, {dp.TargetPosition.Value.Z:F1}) delay {dp.Delay}");
                 accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
