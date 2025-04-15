@@ -7929,6 +7929,8 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 dp.Color = accessory.Data.DefaultSafeColor;
                 dp.DestoryAt = 7500;
                 accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+                accessory.MoveHelper(0, dp.TargetPosition);
+                
 
                 dp = accessory.Data.GetDefaultDrawProperties();
                 dp.Name = "P3_时间压缩_短火_放回溯";
@@ -7940,6 +7942,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 dp.Delay = 7500;
                 dp.DestoryAt = 5000;
                 accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+                accessory.MoveHelper(dp.Delay, dp.TargetPosition);
 
                 dp = accessory.Data.GetDefaultDrawProperties();
                 dp.Name = "P3_时间压缩_短火_场中分摊";
@@ -7951,6 +7954,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 dp.Delay = 12500;
                 dp.DestoryAt = 5000;
                 accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+                accessory.MoveHelper(dp.Delay, dp.TargetPosition);
 
 
                 dp = accessory.Data.GetDefaultDrawProperties();
@@ -7963,6 +7967,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 dp.Delay = 22500;
                 dp.DestoryAt = 15000;
                 accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+                accessory.MoveHelper(dp.Delay, dp.TargetPosition);
             }
 
             //中火
@@ -7977,6 +7982,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 dp.Color = accessory.Data.DefaultSafeColor;
                 dp.DestoryAt = 7500;
                 accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+                accessory.MoveHelper(0, dp.TargetPosition);
 
                 dp = accessory.Data.GetDefaultDrawProperties();
                 dp.Name = "P3_时间压缩_中火_放回溯";
@@ -7988,6 +7994,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 dp.Delay = 7500;
                 dp.DestoryAt = 5000;
                 accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+                accessory.MoveHelper(dp.Delay, dp.TargetPosition);
 
                 dp = accessory.Data.GetDefaultDrawProperties();
                 dp.Name = "P3_时间压缩_中火_放火";
@@ -7999,6 +8006,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 dp.Delay = 12500;
                 dp.DestoryAt = 5000;
                 accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+                accessory.MoveHelper(dp.Delay, dp.TargetPosition);
 
                 dp = accessory.Data.GetDefaultDrawProperties();
                 dp.Name = "P3_时间压缩_中火_中场";
@@ -8010,6 +8018,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 dp.Delay = 17500;
                 dp.DestoryAt = 10000;
                 accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+                accessory.MoveHelper(dp.Delay, dp.TargetPosition);
 
                 dp = accessory.Data.GetDefaultDrawProperties();
                 dp.Name = "P3_时间压缩_中火_输出位置";
@@ -8021,6 +8030,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 dp.Delay = 32500;
                 dp.DestoryAt = 5000;
                 accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+                accessory.MoveHelper(dp.Delay, dp.TargetPosition);
 
             }
 
@@ -8036,6 +8046,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 dp.Color = accessory.Data.DefaultSafeColor;
                 dp.DestoryAt = 7500;
                 accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+                accessory.MoveHelper(0, dp.TargetPosition);
 
                 dp = accessory.Data.GetDefaultDrawProperties();
                 dp.Name = "P3_时间压缩_长火_中场分摊";
@@ -8047,6 +8058,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 dp.Delay = 12500;
                 dp.DestoryAt = 5000;
                 accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+                accessory.MoveHelper(dp.Delay, dp.TargetPosition);
 
                 dp = accessory.Data.GetDefaultDrawProperties();
                 dp.Name = "P3_时间压缩_长火_回溯";
@@ -8058,6 +8070,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 dp.Delay = 17500;
                 dp.DestoryAt = 5000;
                 accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+                accessory.MoveHelper(dp.Delay, dp.TargetPosition);
 
                 dp = accessory.Data.GetDefaultDrawProperties();
                 dp.Name = "P3_时间压缩_长火_放火";
@@ -8069,6 +8082,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 dp.Delay = 22500;
                 dp.DestoryAt = 5000;
                 accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+                accessory.MoveHelper(dp.Delay, dp.TargetPosition);
 
                 dp = accessory.Data.GetDefaultDrawProperties();
                 dp.Name = "P3_时间压缩_长火_输出";
@@ -8080,6 +8094,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 dp.Delay = 27500;
                 dp.DestoryAt = 10000;
                 accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+                accessory.MoveHelper(dp.Delay, dp.TargetPosition);
             }
 
             if (myFire == 4)
@@ -8141,6 +8156,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                     dp.Color = accessory.Data.DefaultSafeColor;
                     dp.DestoryAt = 7500;
                     accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+                    accessory.MoveHelper(0, dp.TargetPosition);
 
                     dp = accessory.Data.GetDefaultDrawProperties();
                     dp.Name = "P3_时间压缩_冰D_中场分摊";
@@ -8152,6 +8168,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                     dp.Delay = 12500;
                     dp.DestoryAt = 5000;
                     accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+                    accessory.MoveHelper(dp.Delay, dp.TargetPosition);
 
                     dp = accessory.Data.GetDefaultDrawProperties();
                     dp.Name = "P3_时间压缩_冰D_回溯";
@@ -8163,6 +8180,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                     dp.Delay = 17500;
                     dp.DestoryAt = 5000;
                     accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+                    accessory.MoveHelper(dp.Delay, dp.TargetPosition);
 
                     dp = accessory.Data.GetDefaultDrawProperties();
                     dp.Name = "P3_时间压缩_冰D_放冰";
@@ -8174,6 +8192,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                     dp.Delay = 22500;
                     dp.DestoryAt = 5000;
                     accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+                    accessory.MoveHelper(dp.Delay, dp.TargetPosition);
 
                     dp = accessory.Data.GetDefaultDrawProperties();
                     dp.Name = "P3_时间压缩_长火_输出";
@@ -8185,6 +8204,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                     dp.Delay = 27500;
                     dp.DestoryAt = 10000;
                     accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+                    accessory.MoveHelper(dp.Delay, dp.TargetPosition);
                 }
             }
         }
@@ -8209,6 +8229,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 dp.Color = accessory.Data.DefaultSafeColor;
                 dp.DestoryAt = 4000;
                 accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
+                accessory.MoveHelper(0, dp.TargetPosition);
             }
         }
 
@@ -18993,6 +19014,13 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             };
             return str;
         }
+    }
+    
+    public static async void MoveHelper(float delayMs, Vector3 target)
+    {
+        await Task.Delay((int)delayMs);
+        string command = $"/Wotou_BRD moveTo ({target.X:F2},{target.Y:F2},{target.Z:F2})";
+        accessory.Method.SendChat(command);
     }
     
     #endregion
