@@ -1,7 +1,7 @@
 ﻿using System;
- using System.Numerics;
- using KodakkuAssist.Module.Draw;
- using KodakkuAssist.Module.GameEvent;
+using System.Numerics;
+using KodakkuAssist.Module.Draw;
+using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
 using Newtonsoft.Json;
 
