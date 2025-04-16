@@ -28,7 +28,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
     [ScriptType(name: "Karlin的绝伊甸脚本 (灵视改装版) wotou 修改自用",
         territorys: [1238],
         guid: "148718fd-575d-493a-8ac7-1cc7092aff81",
-        version: "0.0.1.22",
+        version: "0.0.1.23",
         note: notesOfTheScript,
         author: "Karlin")]
 
@@ -17455,6 +17455,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                         currentProperty.DestoryAt=6900;
                         
                         accessory.Method.SendChat($"/Wotou_BRD moveTo ({currentProperty.TargetPosition.Value.X:F1}, {currentProperty.TargetPosition.Value.Y:F1}, {currentProperty.TargetPosition.Value.Z:F1}) delay 0");
+                        accessory.Method.SendChat($"/e moveTo ({currentProperty.TargetPosition.Value.X:F1}, {currentProperty.TargetPosition.Value.Y:F1}, {currentProperty.TargetPosition.Value.Z:F1}) delay 0");
 
                         accessory.Method.SendDraw(DrawModeEnum.Imgui,DrawTypeEnum.Displacement,currentProperty);
 
@@ -17482,6 +17483,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                         currentProperty.DestoryAt=7500;
                         
                         accessory.Method.SendChat($"/Wotou_BRD moveTo ({currentProperty.TargetPosition.Value.X:F1}, {currentProperty.TargetPosition.Value.Y:F1}, {currentProperty.TargetPosition.Value.Z:F1}) delay {currentProperty.Delay + 300}");
+                        accessory.Method.SendChat($"/e moveTo ({currentProperty.TargetPosition.Value.X:F1}, {currentProperty.TargetPosition.Value.Y:F1}, {currentProperty.TargetPosition.Value.Z:F1}) delay {currentProperty.Delay + 300}");
 
                         accessory.Method.SendDraw(DrawModeEnum.Imgui,DrawTypeEnum.Displacement,currentProperty);
 
