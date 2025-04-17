@@ -28,7 +28,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
     [ScriptType(name: "Karlin的绝伊甸脚本 (灵视改装版) wotou 修改自用",
         territorys: [1238],
         guid: "148718fd-575d-493a-8ac7-1cc7092aff81",
-        version: "0.0.1.27",
+        version: "0.0.1.28",
         note: notesOfTheScript,
         author: "Karlin")]
 
@@ -15479,9 +15479,9 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                         accessory.Method.SendChat($"/Wotou_BRD moveTo ({Goline5.TargetPosition.Value.X:F1}, {Goline5.TargetPosition.Value.Y:F1}, {Goline5.TargetPosition.Value.Z:F1}) delay {Goline5.Delay}");
                      accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, Goline5);
                      
-                     /*
-                     var followMtDelay = Goline5.Delay = 9000 + BladeTimes * 5.5;
-                     accessory.Method.SendChat($"/Wotou_BRD follow {accessory.Data.PartyList[1]} for 5000");*/
+                     
+                     var followMtDelay = 9000 + BladeTimes * 5.5;
+                     accessory.Method.SendChat($"/Wotou_BRD follow {accessory.Data.PartyList[1]} for 5000 delay {followMtDelay}");
                  }
              }
         }
