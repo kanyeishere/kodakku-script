@@ -28,7 +28,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
     [ScriptType(name: "Karlin的绝伊甸脚本 (灵视改装版) wotou 修改自用",
         territorys: [1238],
         guid: "148718fd-575d-493a-8ac7-1cc7092aff81",
-        version: "0.0.1.25",
+        version: "0.0.1.26",
         note: notesOfTheScript,
         author: "Karlin")]
 
@@ -15384,7 +15384,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                      Goline1.ScaleMode |= ScaleMode.YByDistance;
                      Goline1.TargetPosition = Vector3Fucker(BladeRoutes[1]);
                      if (Phase5_Auto_Moving_Of_Fulgent_Blade)
-                        accessory.Method.SendChat($"/Wotou_BRD moveTo ({Goline1.TargetPosition.Value.X:F1}, {Goline1.TargetPosition.Value.Y:F1}, {Goline1.TargetPosition.Value.Z:F1}) delay 0");
+                        accessory.Method.SendChat($"/Wotou_BRD moveTo ({Goline1.TargetPosition.Value.X:F1}, {Goline1.TargetPosition.Value.Y:F1}, {Goline1.TargetPosition.Value.Z:F1}) delay {Goline1.Delay}");
                      accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, Goline1);
 
                      var line2 = accessory.Data.GetDefaultDrawProperties();
@@ -15407,7 +15407,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                      Goline2.ScaleMode |= ScaleMode.YByDistance;
                      Goline2.TargetPosition = Vector3Fucker(BladeRoutes[2]);
                      if (Phase5_Auto_Moving_Of_Fulgent_Blade)
-                        accessory.Method.SendChat($"/Wotou_BRD moveTo ({Goline2.TargetPosition.Value.X:F1}, {Goline2.TargetPosition.Value.Y:F1}, {Goline2.TargetPosition.Value.Z:F1}) delay 0");
+                        accessory.Method.SendChat($"/Wotou_BRD moveTo ({Goline2.TargetPosition.Value.X:F1}, {Goline2.TargetPosition.Value.Y:F1}, {Goline2.TargetPosition.Value.Z:F1}) delay {Goline2.Delay}");
                      accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, Goline2);
 
                      var line3 = accessory.Data.GetDefaultDrawProperties();
@@ -15430,7 +15430,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                      Goline3.ScaleMode |= ScaleMode.YByDistance;
                      Goline3.TargetPosition = Vector3Fucker(BladeRoutes[3]);
                      if (Phase5_Auto_Moving_Of_Fulgent_Blade)
-                        accessory.Method.SendChat($"/Wotou_BRD moveTo ({Goline3.TargetPosition.Value.X:F1}, {Goline3.TargetPosition.Value.Y:F1}, {Goline3.TargetPosition.Value.Z:F1}) delay 0");
+                        accessory.Method.SendChat($"/Wotou_BRD moveTo ({Goline3.TargetPosition.Value.X:F1}, {Goline3.TargetPosition.Value.Y:F1}, {Goline3.TargetPosition.Value.Z:F1}) delay {Goline3.Delay}");
                      accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, Goline3);
 
                      var line4 = accessory.Data.GetDefaultDrawProperties();
@@ -15453,7 +15453,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                      Goline4.ScaleMode |= ScaleMode.YByDistance;
                      Goline4.TargetPosition = Vector3Fucker(BladeRoutes[4]);
                      if (Phase5_Auto_Moving_Of_Fulgent_Blade)
-                        accessory.Method.SendChat($"/Wotou_BRD moveTo ({Goline4.TargetPosition.Value.X:F1}, {Goline4.TargetPosition.Value.Y:F1}, {Goline4.TargetPosition.Value.Z:F1}) delay 0");
+                        accessory.Method.SendChat($"/Wotou_BRD moveTo ({Goline4.TargetPosition.Value.X:F1}, {Goline4.TargetPosition.Value.Y:F1}, {Goline4.TargetPosition.Value.Z:F1}) delay {Goline4.Delay}");
                      accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, Goline4);
 
                      var line5 = accessory.Data.GetDefaultDrawProperties();
@@ -15476,8 +15476,11 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                      Goline5.ScaleMode |= ScaleMode.YByDistance;
                      Goline5.TargetPosition = Vector3Fucker(BladeRoutes[5]);
                      if (Phase5_Auto_Moving_Of_Fulgent_Blade)
-                        accessory.Method.SendChat($"/Wotou_BRD moveTo ({Goline5.TargetPosition.Value.X:F1}, {Goline5.TargetPosition.Value.Y:F1}, {Goline5.TargetPosition.Value.Z:F1}) delay 0");
+                        accessory.Method.SendChat($"/Wotou_BRD moveTo ({Goline5.TargetPosition.Value.X:F1}, {Goline5.TargetPosition.Value.Y:F1}, {Goline5.TargetPosition.Value.Z:F1}) delay {Goline5.Delay}");
                      accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, Goline5);
+                     
+                     var followMtDelay = Goline5.Delay = 9000 + BladeTimes * 5.5;
+                     accessory.Method.SendChat($"/Wotou_BRD follow {accessory.Data.PartyList[1]} for 5000");
                  }
              }
         }
