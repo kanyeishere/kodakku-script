@@ -28,7 +28,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
     [ScriptType(name: "Karlin的绝伊甸脚本 (灵视改装版) wotou 修改自用",
         territorys: [1238],
         guid: "148718fd-575d-493a-8ac7-1cc7092aff81",
-        version: "0.0.1.28",
+        version: "0.0.1.29",
         note: notesOfTheScript,
         author: "Karlin")]
 
@@ -15481,7 +15481,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                      
                      
                      var followMtDelay = 9000 + BladeTimes * 5.5;
-                     accessory.Method.SendChat($"/Wotou_BRD follow {accessory.Data.PartyList[1]} for 5000 delay {followMtDelay}");
+                     accessory.Method.SendChat($"/Wotou_BRD follow {accessory.Data.PartyList[0]} for 5000 delay {followMtDelay}");
                  }
              }
         }
