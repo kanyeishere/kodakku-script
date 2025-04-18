@@ -28,7 +28,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
     [ScriptType(name: "Karlin的绝伊甸脚本 (灵视改装版) wotou 修改自用",
         territorys: [1238],
         guid: "148718fd-575d-493a-8ac7-1cc7092aff81",
-        version: "0.0.1.34",
+        version: "0.0.1.35",
         note: notesOfTheScript,
         author: "Karlin", 
         updateInfo: UpdateInfo)]
@@ -8253,6 +8253,8 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 return;
 
             }
+            
+            accessory.Method.SendChat($"/Wotou_BRD moveTo (100, 0, 100) delay 0");
 
             if (Enable_Text_Prompts)
             {
