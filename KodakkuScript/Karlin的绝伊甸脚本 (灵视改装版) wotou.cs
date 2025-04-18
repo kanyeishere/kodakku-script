@@ -28,9 +28,10 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
     [ScriptType(name: "Karlin的绝伊甸脚本 (灵视改装版) wotou 修改自用",
         territorys: [1238],
         guid: "148718fd-575d-493a-8ac7-1cc7092aff81",
-        version: "0.0.1.30",
+        version: "0.0.1.33",
         note: notesOfTheScript,
-        author: "Karlin")]
+        author: "Karlin", 
+        updateInfo: ".33 版本更新了p5 地火与挡枪的绿玩移动（未测试所以默认关闭），如需启用，请进入设置开启，并且关闭bmr ai以免冲突")]
 
     public class Futures_Rewritten_Ultimate
     {
@@ -419,8 +420,8 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         public ScriptColor Phase5_Colour_Of_The_Boss_Central_Axis { get; set; } = new() { V4 = new(1f, 0f, 0f, 1f) };
         [UserSetting("P5璀璨之刃(地火) 后Boss面向人群")]
         public bool Phase5_Boss_Faces_Players_After_Fulgent_Blade { get; set; } = true;
-        [UserSetting("P5璀璨之刃(地火) 绿玩移动")]
-        public bool Phase5_Auto_Moving_Of_Fulgent_Blade { get; set; } = false;
+        [UserSetting("P5 地火挡枪绿玩移动（打开这一项的话，请关闭BMR AI）")]
+        public bool Phase5_Auto_Moving_Without_BossModRebornAi { get; set; } = false;
         [UserSetting("P5光与暗之翼(踩塔) 攻略")]
         public Phase5_Strats_Of_Wings_Dark_And_Light Phase5_Strat_Of_Wings_Dark_And_Light { get; set; } = Phase5_Strats_Of_Wings_Dark_And_Light.Grey9_Brain_Dead_MT_First_Tower_Opposite_灰九脑死法MT一塔对侧_莫灵喵与MMW;
         [UserSetting("P5光与暗之翼(踩塔) 灰九脑死法的分支")]
@@ -15362,7 +15363,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                      Goline0.Scale = new(2);
                      Goline0.ScaleMode |= ScaleMode.YByDistance;
                      Goline0.TargetPosition = Vector3Fucker(BladeRoutes[0]);
-                     if (Phase5_Auto_Moving_Of_Fulgent_Blade) 
+                     if (Phase5_Auto_Moving_Without_BossModRebornAi) 
                          accessory.Method.SendChat($"/Wotou_BRD moveTo ({Goline0.TargetPosition.Value.X:F1}, {Goline0.TargetPosition.Value.Y:F1}, {Goline0.TargetPosition.Value.Z:F1}) delay 0");
                      accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, Goline0);
 
@@ -15383,7 +15384,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                      Goline1.Scale = new(2);
                      Goline1.ScaleMode |= ScaleMode.YByDistance;
                      Goline1.TargetPosition = Vector3Fucker(BladeRoutes[1]);
-                     if (Phase5_Auto_Moving_Of_Fulgent_Blade)
+                     if (Phase5_Auto_Moving_Without_BossModRebornAi)
                         accessory.Method.SendChat($"/Wotou_BRD moveTo ({Goline1.TargetPosition.Value.X:F1}, {Goline1.TargetPosition.Value.Y:F1}, {Goline1.TargetPosition.Value.Z:F1}) delay {Goline1.Delay}");
                      accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, Goline1);
 
@@ -15406,7 +15407,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                      Goline2.Scale = new(2);
                      Goline2.ScaleMode |= ScaleMode.YByDistance;
                      Goline2.TargetPosition = Vector3Fucker(BladeRoutes[2]);
-                     if (Phase5_Auto_Moving_Of_Fulgent_Blade)
+                     if (Phase5_Auto_Moving_Without_BossModRebornAi)
                         accessory.Method.SendChat($"/Wotou_BRD moveTo ({Goline2.TargetPosition.Value.X:F1}, {Goline2.TargetPosition.Value.Y:F1}, {Goline2.TargetPosition.Value.Z:F1}) delay {Goline2.Delay}");
                      accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, Goline2);
 
@@ -15429,7 +15430,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                      Goline3.Scale = new(2);
                      Goline3.ScaleMode |= ScaleMode.YByDistance;
                      Goline3.TargetPosition = Vector3Fucker(BladeRoutes[3]);
-                     if (Phase5_Auto_Moving_Of_Fulgent_Blade)
+                     if (Phase5_Auto_Moving_Without_BossModRebornAi)
                         accessory.Method.SendChat($"/Wotou_BRD moveTo ({Goline3.TargetPosition.Value.X:F1}, {Goline3.TargetPosition.Value.Y:F1}, {Goline3.TargetPosition.Value.Z:F1}) delay {Goline3.Delay}");
                      accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, Goline3);
 
@@ -15452,7 +15453,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                      Goline4.Scale = new(2);
                      Goline4.ScaleMode |= ScaleMode.YByDistance;
                      Goline4.TargetPosition = Vector3Fucker(BladeRoutes[4]);
-                     if (Phase5_Auto_Moving_Of_Fulgent_Blade)
+                     if (Phase5_Auto_Moving_Without_BossModRebornAi)
                         accessory.Method.SendChat($"/Wotou_BRD moveTo ({Goline4.TargetPosition.Value.X:F1}, {Goline4.TargetPosition.Value.Y:F1}, {Goline4.TargetPosition.Value.Z:F1}) delay {Goline4.Delay}");
                      accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, Goline4);
 
@@ -15475,7 +15476,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                      Goline5.Scale = new(2);
                      Goline5.ScaleMode |= ScaleMode.YByDistance;
                      Goline5.TargetPosition = Vector3Fucker(BladeRoutes[5]);
-                     if (Phase5_Auto_Moving_Of_Fulgent_Blade)
+                     if (Phase5_Auto_Moving_Without_BossModRebornAi)
                         accessory.Method.SendChat($"/Wotou_BRD moveTo ({Goline5.TargetPosition.Value.X:F1}, {Goline5.TargetPosition.Value.Y:F1}, {Goline5.TargetPosition.Value.Z:F1}) delay {Goline5.Delay}");
                      accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, Goline5);
                      
@@ -18458,7 +18459,8 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 timelineControl += 4550;
 
                 accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, currentProperty);
-
+                if (Phase5_Auto_Moving_Without_BossModRebornAi) 
+                    accessory.Method.SendChat($"/Wotou_BRD moveTo ({currentProperty.TargetPosition.Value.X:F1}, {currentProperty.TargetPosition.Value.Y:F1}, {currentProperty.TargetPosition.Value.Z:F1}) delay 0");
             }
 
             else
@@ -18478,6 +18480,8 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 timelineControl += 4550;
 
                 accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, currentProperty);
+                if (Phase5_Auto_Moving_Without_BossModRebornAi) 
+                    accessory.Method.SendChat($"/Wotou_BRD moveTo ({currentProperty.TargetPosition.Value.X:F1}, {currentProperty.TargetPosition.Value.Y:F1}, {currentProperty.TargetPosition.Value.Z:F1}) delay 0");
 
             }
 
@@ -18501,6 +18505,8 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 timelineControl += 2450;
 
                 accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, currentProperty);
+                if (Phase5_Auto_Moving_Without_BossModRebornAi) 
+                    accessory.Method.SendChat($"/Wotou_BRD moveTo ({currentProperty.TargetPosition.Value.X:F1}, {currentProperty.TargetPosition.Value.Y:F1}, {currentProperty.TargetPosition.Value.Z:F1}) delay {currentProperty.Delay}");
 
                 currentProperty = accessory.Data.GetDefaultDrawProperties();
 
@@ -18517,7 +18523,8 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 timelineControl += 2250;
 
                 accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, currentProperty);
-
+                if (Phase5_Auto_Moving_Without_BossModRebornAi) 
+                    accessory.Method.SendChat($"/Wotou_BRD moveTo ({currentProperty.TargetPosition.Value.X:F1}, {currentProperty.TargetPosition.Value.Y:F1}, {currentProperty.TargetPosition.Value.Z:F1}) delay {currentProperty.Delay}");
             }
 
             // ----- -----
@@ -18541,6 +18548,8 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             timelineControl += 2450;
 
             accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, currentProperty);
+            if (Phase5_Auto_Moving_Without_BossModRebornAi) 
+                accessory.Method.SendChat($"/Wotou_BRD moveTo ({currentProperty.TargetPosition.Value.X:F1}, {currentProperty.TargetPosition.Value.Y:F1}, {currentProperty.TargetPosition.Value.Z:F1}) delay {currentProperty.Delay}");
 
             currentProperty = accessory.Data.GetDefaultDrawProperties();
 
@@ -18557,6 +18566,8 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             timelineControl += 2250;
 
             accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, currentProperty);
+            if (Phase5_Auto_Moving_Without_BossModRebornAi) 
+                accessory.Method.SendChat($"/Wotou_BRD moveTo ({currentProperty.TargetPosition.Value.X:F1}, {currentProperty.TargetPosition.Value.Y:F1}, {currentProperty.TargetPosition.Value.Z:F1}) delay {currentProperty.Delay}");
 
             // ----- -----
 
@@ -18580,6 +18591,8 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 timelineControl += 2450;
 
                 accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, currentProperty);
+                if (Phase5_Auto_Moving_Without_BossModRebornAi) 
+                    accessory.Method.SendChat($"/Wotou_BRD moveTo ({currentProperty.TargetPosition.Value.X:F1}, {currentProperty.TargetPosition.Value.Y:F1}, {currentProperty.TargetPosition.Value.Z:F1}) delay {currentProperty.Delay}");
 
                 currentProperty = accessory.Data.GetDefaultDrawProperties();
 
@@ -18596,6 +18609,8 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 timelineControl += 2250;
 
                 accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, currentProperty);
+                if (Phase5_Auto_Moving_Without_BossModRebornAi) 
+                    accessory.Method.SendChat($"/Wotou_BRD moveTo ({currentProperty.TargetPosition.Value.X:F1}, {currentProperty.TargetPosition.Value.Y:F1}, {currentProperty.TargetPosition.Value.Z:F1}) delay {currentProperty.Delay}");
 
             }
 
