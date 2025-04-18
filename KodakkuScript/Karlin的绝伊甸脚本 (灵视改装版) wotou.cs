@@ -28,10 +28,10 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
     [ScriptType(name: "Karlin的绝伊甸脚本 (灵视改装版) wotou 修改自用",
         territorys: [1238],
         guid: "148718fd-575d-493a-8ac7-1cc7092aff81",
-        version: "0.0.1.31",
+        version: "0.0.1.32",
         note: notesOfTheScript,
         author: "Karlin",
-        UpdateInfo: ".31 版本更新了地火及挡枪的绿玩移动，如果需要使用，请进入设置开启（未测试，所以默认关闭），并且关闭 bmr ai 以免冲突",)]
+        UpdateInfo: ".32 版本更新了地火及挡枪的绿玩移动，如果需要使用，请进入设置开启（未测试，所以默认关闭），并且关闭 bmr ai 以免冲突")]
 
     public class Futures_Rewritten_Ultimate
     {
