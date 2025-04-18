@@ -28,7 +28,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
     [ScriptType(name: "Karlin的绝伊甸脚本 (灵视改装版) wotou 修改自用",
         territorys: [1238],
         guid: "148718fd-575d-493a-8ac7-1cc7092aff81",
-        version: "0.0.1.36",
+        version: "0.0.1.37",
         note: notesOfTheScript,
         author: "Karlin", 
         updateInfo: UpdateInfo)]
@@ -18243,7 +18243,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                         currentProperty.DestoryAt=7500;
 
                         accessory.Method.SendDraw(DrawModeEnum.Imgui,DrawTypeEnum.Displacement,currentProperty);
-                        accessory.Method.SendChat($"/Wotou_BRD moveTo ({currentProperty.TargetPosition.Value.X:F1}, {currentProperty.TargetPosition.Value.Y:F1}, {currentProperty.TargetPosition.Value.Z:F1}) delay {currentProperty.Delay + 300}");
+                        accessory.Method.SendChat($"/Wotou_BRD moveTo ({currentProperty.TargetPosition.Value.X:F1}, {currentProperty.TargetPosition.Value.Y:F1}, {currentProperty.TargetPosition.Value.Z:F1}) delay {currentProperty.Delay + 800}");
 
 
                     }
