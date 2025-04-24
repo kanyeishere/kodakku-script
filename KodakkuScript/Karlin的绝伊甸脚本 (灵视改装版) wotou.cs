@@ -28,7 +28,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
     [ScriptType(name: "Karlin的绝伊甸脚本 (灵视改装版) wotou 修改自用",
         territorys: [1238],
         guid: "148718fd-575d-493a-8ac7-1cc7092aff81",
-        version: "0.0.1.37",
+        version: "0.0.1.38",
         note: notesOfTheScript,
         author: "Karlin", 
         updateInfo: UpdateInfo)]
@@ -1727,8 +1727,13 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         {
             if (parse!=1) return;
             if (!ParseObjectId(@event["SourceId"], out var sid)) return;
-            var obj = accessory.Data.Objects.SearchByEntityId(((uint)sid) + 1);
-            if (obj == null) return;
+             
+            KodakkuAssist.Data.IGameObject? obj=null;
+            do {
+                ++sid;
+                obj=accessory.Data.Objects.SearchByEntityId((uint)sid);
+            } while(obj==null);
+
             var dir8 = PositionTo8Dir(obj.Position, new(100, 0, 100));
             P1雾龙记录[dir8 % 4] = 1;
         }
@@ -1743,11 +1748,17 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         {
             if (parse!=1) return;
             if (!ParseObjectId(@event["SourceId"], out var sid)) return;
+            
+            KodakkuAssist.Data.IGameObject? obj=null;
+            do {
+                ++sid;
+                obj=accessory.Data.Objects.SearchByEntityId((uint)sid);
+            } while(obj==null);
 
             var dp = accessory.Data.GetDefaultDrawProperties();
             dp.Name = "P1_雾龙范围";
             dp.Scale = new(16, 50);
-            dp.Owner = sid + 1;
+            dp.Owner = sid;
             dp.Color = accessory.Data.DefaultDangerColor;
             dp.DestoryAt = 9000;
             accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Rect, dp);
@@ -18243,7 +18254,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                         currentProperty.DestoryAt=7500;
 
                         accessory.Method.SendDraw(DrawModeEnum.Imgui,DrawTypeEnum.Displacement,currentProperty);
-                        accessory.Method.SendChat($"/Wotou_BRD moveTo ({currentProperty.TargetPosition.Value.X:F1}, {currentProperty.TargetPosition.Value.Y:F1}, {currentProperty.TargetPosition.Value.Z:F1}) delay {currentProperty.Delay + 800}");
+                        accessory.Method.SendChat($"/Wotou_BRD moveTo ({currentProperty.TargetPosition.Value.X:F1}, {currentProperty.TargetPosition.Value.Y:F1}, {currentProperty.TargetPosition.Value.Z:F1}) delay {currentProperty.Delay + 1000}");
 
 
                     }
