@@ -28,7 +28,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
     [ScriptType(name: "Karlin的绝伊甸脚本 (灵视改装版) wotou 修改自用",
         territorys: [1238],
         guid: "148718fd-575d-493a-8ac7-1cc7092aff81",
-        version: "0.0.1.39",
+        version: "0.0.1.40",
         note: notesOfTheScript,
         author: "Karlin", 
         updateInfo: UpdateInfo)]
@@ -425,8 +425,8 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         public ScriptColor Phase5_Colour_Of_The_Boss_Central_Axis { get; set; } = new() { V4 = new(1f, 0f, 0f, 1f) };
         [UserSetting("P5璀璨之刃(地火) 后Boss面向人群")]
         public bool Phase5_Boss_Faces_Players_After_Fulgent_Blade { get; set; } = true;
-        [UserSetting("P5 地火挡枪绿玩移动（打开这一项的话，请关闭BMR AI）")]
-        public bool Phase5_Auto_Moving_Without_BossModRebornAi { get; set; } = false;
+        // [UserSetting("P5 地火挡枪绿玩移动（打开这一项的话，请关闭BMR AI）")]
+        public bool Phase5_Auto_Moving_Without_BossModRebornAi { get; set; } = true;
         [UserSetting("P5光与暗之翼(踩塔) 攻略")]
         public Phase5_Strats_Of_Wings_Dark_And_Light Phase5_Strat_Of_Wings_Dark_And_Light { get; set; } = Phase5_Strats_Of_Wings_Dark_And_Light.Grey9_Brain_Dead_MT_First_Tower_Opposite_灰九脑死法MT一塔对侧_莫灵喵与MMW;
         [UserSetting("P5光与暗之翼(踩塔) 灰九脑死法的分支")]
