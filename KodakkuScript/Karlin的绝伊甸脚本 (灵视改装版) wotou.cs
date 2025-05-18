@@ -28,7 +28,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
     [ScriptType(name: "Karlin的绝伊甸脚本 (灵视改装版) wotou 修改自用",
         territorys: [1238],
         guid: "148718fd-575d-493a-8ac7-1cc7092aff81",
-        version: "0.0.1.44",
+        version: "0.0.1.45",
         note: notesOfTheScript,
         author: "Karlin", 
         updateInfo: UpdateInfo)]
@@ -349,7 +349,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         public bool _____Phase3_Settings_____ { get; set; } = true;
         [UserSetting("P3一运 攻略")]
         public Phase3_Strats_Of_The_First_Half Phase3_Strat_Of_The_First_Half { get; set; } = Phase3_Strats_Of_The_First_Half.Moogle_莫古力_莫灵喵与MMW;
-        UserSetting("P3一运 绿玩移动")]
+        [UserSetting("P3一运 绿玩移动")]
         public bool Phase3_Auto_Moving { get; set; } = true;
         [UserSetting("P3二运 攻略")]
         public Phase3_Strats_Of_The_Second_Half Phase3_Strat_Of_The_Second_Half { get; set; } = Phase3_Strats_Of_The_Second_Half.Moglin_Meow_Or_Baby_Wheelchair_Based_On_Signs_根据目标标记的莫灵喵法或宝宝椅法;
