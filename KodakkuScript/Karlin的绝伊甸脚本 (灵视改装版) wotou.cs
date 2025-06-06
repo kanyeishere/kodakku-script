@@ -15,11 +15,14 @@ using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
 // using System.DirectoryServices;
 using System.Xml.Linq;
+using FFXIVClientStructs.FFXIV.Client.Game.Character;
+using FFXIVClientStructs.FFXIV.Client.Game.Object;
 using CicerosKodakkuAssist.FuturesRewrittenUltimate;
-using Dalamud.Game.ClientState.Objects.Types;
+//using Dalamud.Game.ClientState.Objects.Types;
 using Dalamud.Utility.Numerics;
 using ECommons.MathHelpers;
 using KodakkuAssist.Module.GameOperate;
+using KodakkuAssist.Data;
 using Newtonsoft.Json.Linq;
 
 namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
@@ -351,6 +354,8 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         public Phase3_Strats_Of_The_First_Half Phase3_Strat_Of_The_First_Half { get; set; } = Phase3_Strats_Of_The_First_Half.Moogle_莫古力_莫灵喵与MMW;
         [UserSetting("P3一运 绿玩移动")]
         public bool Phase3_Auto_Moving { get; set; } = true;
+        [UserSetting("P3一运 眩晕后自动调整面向")]
+        public bool Phase3_Auto_FaceLamp{ get; set; } = true;
         [UserSetting("P3二运 攻略")]
         public Phase3_Strats_Of_The_Second_Half Phase3_Strat_Of_The_Second_Half { get; set; } = Phase3_Strats_Of_The_Second_Half.Moglin_Meow_Or_Baby_Wheelchair_Based_On_Signs_根据目标标记的莫灵喵法或宝宝椅法;
         [UserSetting("P3二运 双分组法的分支")]
@@ -512,6 +517,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         System.Threading.AutoResetEvent phase2_semaphoreFinalLightsteepedWasConfirmed = new System.Threading.AutoResetEvent(false);
 
         volatile string phase3_bossId = "";
+        int myP3LampIndex = -1;
         List<int> P3FireBuff = [0, 0, 0, 0, 0, 0, 0, 0];
         List<int> P3WaterBuff = [0, 0, 0, 0, 0, 0, 0, 0];
         List<int> P3ReturnBuff = [0, 0, 0, 0, 0, 0, 0, 0];
@@ -1011,6 +1017,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             phase2_semaphoreFinalLightsteepedWasConfirmed = new System.Threading.AutoResetEvent(false);
 
             phase3_bossId = "";
+            myP3LampIndex = -1;
             P3FloorFireDone = false;
             P3Stack = [0, 0, 0, 0, 0, 0, 0, 0];
             phase3_typeOfDarkWaterIii = [
@@ -7933,7 +7940,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             //accessory.Log.Debug($"myDir8 {myDir8}");
             if (myDir8 == -1) return;
             var myRot = myDir8 * float.Pi / 4;
-
+            myP3LampIndex=myDir8;
             Vector3 centre = new(100, 0, 100);
             Vector3 fireN = new(100, 0, 84.5f);
             Vector3 returnPosN = P3WaterBuff[myIndex] == 2 ? new(100, 0, 91.5f) : new(100, 0, 98);
@@ -8257,7 +8264,25 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 accessory.Method.SendDraw(DrawModeEnum.Imgui, DrawTypeEnum.Displacement, dp);
             }
         }
-
+        [ScriptMethod(name: "P3_眩晕后自动面向", eventType: EventTypeEnum.StatusAdd, eventCondition: ["StatusID:4163"], userControl: true, suppress: 10000)]
+        public void P3_眩晕后自动面向(Event @event, ScriptAccessory accessory)
+        {
+            if (parse != 31) return;
+            if(!Phase3_Auto_FaceLamp)return;
+            var myRot = myP3LampIndex switch
+            {
+                0 => float.Pi,
+                1 => float.Pi/4,
+                2 => float.Pi/2,
+                3 => float.Pi*3/4,
+                4 => 0,
+                5 => -float.Pi/4,
+                6 => -float.Pi/2,
+                7 => -float.Pi*3/4,
+                _ => 0,
+            };
+            accessory.SetRotation(accessory.Data.MyObject, myRot);
+        }
         [ScriptMethod(name: "Phase3 Prompt Before Shell Crusher 破盾一击前提示",
             eventType: EventTypeEnum.StartCasting,
             eventCondition: ["ActionId:40286"])]
@@ -19038,6 +19063,20 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                     accessory.Method.TTS(text);
                 }
             }
+        }
+        public static void SetRotation(this ScriptAccessory sa, IGameObject? obj, float rotation)
+        {
+            if (obj == null || !obj.IsValid())
+            {
+                sa.Log.Error($"传入的IGameObject不合法。");
+                return;
+            }
+            unsafe
+            {
+                GameObject* charaStruct = (GameObject*)obj.Address;
+                charaStruct->SetRotation(rotation);
+            }
+            sa.Log.Debug($"SetRotation => {obj.Name.TextValue} | {obj} => {rotation}");
         }
     }
 
