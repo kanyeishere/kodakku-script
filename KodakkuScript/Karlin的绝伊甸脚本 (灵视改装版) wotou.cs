@@ -8281,6 +8281,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 7 => -float.Pi*3/4,
                 _ => 0,
             };
+            Thread.Sleep(500);
             accessory.SetRotation(accessory.Data.MyObject, myRot);
         }
         [ScriptMethod(name: "Phase3 Prompt Before Shell Crusher 破盾一击前提示",
