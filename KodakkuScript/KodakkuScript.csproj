@@ -4,6 +4,7 @@
         <TargetFramework>net9.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     </PropertyGroup>
 
     <PropertyGroup>
@@ -20,6 +21,9 @@
       </Reference>
       <Reference Include="ECommons">
         <HintPath>C:\Users\Yiwei\AppData\Roaming\XIVLauncherCN\installedPlugins\KodakkuAssist\0.4.4.0\ECommons.dll</HintPath>
+      </Reference>
+      <Reference Include="FFXIVClientStructs">
+        <HintPath>C:\Users\Yiwei\AppData\Roaming\XIVLauncherCN\addon\Hooks\25-05-06-01\FFXIVClientStructs.dll</HintPath>
       </Reference>
       <Reference Include="KodakkuAssist">
         <HintPath>C:\Users\Yiwei\AppData\Roaming\XIVLauncherCN\installedPlugins\KodakkuAssist\0.4.4.0\KodakkuAssist.dll</HintPath>

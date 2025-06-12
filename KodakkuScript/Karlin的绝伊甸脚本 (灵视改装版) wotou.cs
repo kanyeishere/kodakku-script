@@ -7,6 +7,7 @@ using KodakkuAssist.Module.Draw;
 // using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Threading;
 using ECommons;
 using System.Numerics;
 using Newtonsoft.Json;
@@ -31,7 +32,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
     [ScriptType(name: "Karlin的绝伊甸脚本 (灵视改装版) wotou 修改自用",
         territorys: [1238],
         guid: "148718fd-575d-493a-8ac7-1cc7092aff81",
-        version: "0.0.1.48",
+        version: "0.0.1.49",
         note: notesOfTheScript,
         author: "Karlin", 
         updateInfo: UpdateInfo)]
@@ -8281,11 +8282,11 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 7 => -float.Pi*3/4,
                 _ => 0,
             };
-            Thread.Sleep(50);
+            System.Threading.Thread.Sleep(5000);Thread.Sleep(50);
             accessory.SetRotation(accessory.Data.MyObject, myRot);
-            Thread.Sleep(50);
+            System.Threading.Thread.Sleep(5000);Thread.Sleep(50);
             accessory.SetRotation(accessory.Data.MyObject, myRot);
-            Thread.Sleep(50);
+            System.Threading.Thread.Sleep(5000);Thread.Sleep(50);
             accessory.SetRotation(accessory.Data.MyObject, myRot);
         }
         [ScriptMethod(name: "Phase3 Prompt Before Shell Crusher 破盾一击前提示",
