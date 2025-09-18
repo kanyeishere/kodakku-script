@@ -8,7 +8,6 @@ using KodakkuAssist.Module.Draw;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Threading;
-using ECommons;
 using System.Numerics;
 using Newtonsoft.Json;
 using System.Linq;
@@ -21,7 +20,6 @@ using FFXIVClientStructs.FFXIV.Client.Game.Object;
 using CicerosKodakkuAssist.FuturesRewrittenUltimate;
 //using Dalamud.Game.ClientState.Objects.Types;
 using Dalamud.Utility.Numerics;
-using ECommons.MathHelpers;
 using KodakkuAssist.Module.GameOperate;
 using KodakkuAssist.Data;
 using Newtonsoft.Json.Linq;
@@ -32,7 +30,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
     [ScriptType(name: "Karlin的绝伊甸脚本 (灵视改装版) wotou 修改自用",
         territorys: [1238],
         guid: "148718fd-575d-493a-8ac7-1cc7092aff81",
-        version: "0.0.1.49",
+        version: "0.0.1.50",
         note: notesOfTheScript,
         author: "Karlin", 
         updateInfo: UpdateInfo)]
@@ -466,7 +464,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         readonly Object P1雾龙计数读写锁_AsAConstant = new Object();
         int P1雾龙计数2 = 0;
         readonly Object P1雾龙计数2读写锁_AsAConstant = new Object();
-        int[] P1雾龙记录 = [0, 0, 0, 0];
+        List<int> P1雾龙记录 = new List<int>{0, 0, 0, 0};
         List<MarkType> phase1_markForThePlayersInSafePositions_asAConstant = [
             MarkType.Attack1,
             MarkType.Attack2,
@@ -988,7 +986,7 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
             isInPhase5 = false;
             shenaniganSemaphore.Set();
 
-            P1雾龙记录 = [0, 0, 0, 0];
+            P1雾龙记录 = new List<int>{0, 0, 0, 0};
             P1雾龙计数 = 0;
             P1雾龙计数2 = 0;
             P1转轮召抓人 = [0, 0, 0, 0, 0, 0, 0, 0];
@@ -16072,9 +16070,10 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
                 // I don't know the mathematical ideas behind the algorithm, but it works and it definitely works great.
                 // So as a result, except the multiplier was adjusted from 15 to 18, I just keep the part as is.
 
-                Vector3 position2OfCurrentOt=RotatePoint(position1OfCurrentMt,new(100,0,100),(isLeftFirstAndFarFirst)?
-                                                                                                          (120f.DegToRad()):
-                                                                                                          (-120f.DegToRad()));
+                Vector3 position2OfCurrentOt=RotatePoint(position1OfCurrentMt,new(100,0,100),(isLeftFirstAndFarFirst)? 
+                    (convertDegree(120f)):
+                    (convertDegree(-120f)));
+                
                 Vector3 position1OfCurrentOt=(isLeftFirstAndFarFirst)?
                     (new((position2OfCurrentOt.X-100)/7*18+100,0,(position2OfCurrentOt.Z-100)/7*18+100)):
                     (new((position2OfCurrentOt.X-100)/7+100,0,(position2OfCurrentOt.Z-100)/7+100));
@@ -18994,6 +18993,11 @@ namespace CicerosKodakkuAssist.FuturesRewrittenUltimate
         #endregion
         
         #region Common_Mathematical_Wheels_常用数学轮子
+        
+        public static float convertDegree(float degree) 
+        {
+            return degree*float.Pi/180f;
+        }
 
         private int ParsTargetIcon(string id)
         {
